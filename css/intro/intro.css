@@ -1,0 +1,191 @@
+#intro {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: url(../../assets/bricks.webp) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.intro-title{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline 4px;
+    text-decoration-color: var(--primary-color);
+}
+
+.title{
+    font-family: 'Merienda';
+    font-weight: 700;
+    width: max-content;
+    font-size: 5rem;
+    color: #000000;
+    position: relative;
+    align-self: center;
+    border-radius: 12px;
+    text-shadow:  2px 2px #ffffff;
+}
+
+.title::after{
+    content: "";
+    position: absolute;
+    background: url(../../assets/wheel.avif) no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 70px;
+    top: 30px;
+    right: -90px;
+    animation: wheel 20s infinite alternate;
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(3600deg);
+    }
+}
+
+.intro-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    height: 100%;
+}
+
+.intro-car{
+    display: flex;
+    justify-self: start;
+    max-width: 100%;
+    height: 450px;
+}
+
+.intro-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 20px;
+    padding-left: 50px;
+    width: 80%;
+}
+
+.intro-info span {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.info-text {
+    color: #e2dfdf;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    max-width: 70ch;
+}
+
+.intro-info a {
+    width: max-content;
+    font-size: 0.875rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #503d00;
+    transition: ease-in-out 0.6s;
+    cursor: pointer;
+    border: 1.5px #ffffff solid;
+}
+
+.intro-info a:hover {
+    background-color: #d1ab02;
+}
+
+@media (max-width:1400px){
+    .intro-car{
+        height: 350px;
+    }
+}
+
+@media (max-width:1200px){
+    .intro-car{
+        height: 300px;
+    }
+}
+
+@media (max-width:1000px){
+   .intro-content{
+    grid-template-columns: 1fr;
+    gap: 20px;
+   }
+
+   .intro-car{
+    grid-row: 1;
+    height: 400px;
+    justify-self: center;
+   }
+
+   .intro-info{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+    padding-left: 20px;
+    border-radius: 8px;
+   }
+
+   .info-text{
+        max-width: 60ch;
+    }
+}
+
+@media (max-width:800px){
+    .title{
+        font-size: 4rem;
+        margin-left: -70px;
+    }
+
+    .title::after{
+        top: 20px;
+    }
+
+    .intro-car{
+        height: 300px;
+    }
+
+    .intro-info{
+        padding: 10px;
+    }
+}
+
+@media (max-width:600px){
+    .intro-car{
+        height: 250px;
+    }
+    .info-text{
+        max-width: 50ch;
+    }
+}
+
+@media (max-width:500px){
+    .title{
+        font-size: 3rem;
+        margin-left: -80px;
+    }
+
+    .title::after{
+        height: 60px;
+        width: 60px;
+        top: 10px;
+    }
+
+    .intro-car{
+        height: 200px;
+    }
+    .info-text{
+        max-width: 40ch;
+    }
+}

@@ -1,0 +1,35 @@
+.dec{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+.dec-item img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+@media (max-width: 1200px) {
+    .dec-item img{
+        height: 400px;
+    }
+    .dec-item:nth-child(3) img{
+        object-position: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .dec{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 100%;
+    }
+    .dec-item img{
+        width: 100%;
+    }
+    .dec-item:nth-child(4) img{
+        display: none;
+        }
+}

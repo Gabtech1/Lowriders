@@ -1,0 +1,31 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #000000;
+}
+.title.footer{
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: var(--primary-color);
+}
+.title.footer::after{
+    height: 40px;
+    width: 40px;
+    top: 5px;
+    right: -60px;
+}
+
+.copy{
+    padding: 5px 20px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .title.footer{
+        margin-right: -60px;
+    }
+}

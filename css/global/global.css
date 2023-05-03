@@ -11,6 +11,29 @@ body{
     background-color: #111111;
 }
 
+.top img{
+    height: 40px;
+    animation: wheel infinite 10s alternate;
+    padding: 8px 16px;
+}
+#top{
+    position: fixed;
+    right: 3%;
+    bottom: 6%;
+    display: none;
+}
+
+#top::after{
+    content: "Home";
+    color: #ffffff;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    font-size: 0.725rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2px;
+}
+
 /* Variables */
 :root {
     --primary-color: #f6df11;

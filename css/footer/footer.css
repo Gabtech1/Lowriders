@@ -15,8 +15,8 @@ footer{
 .title.footer::after{
     height: 40px;
     width: 40px;
-    top: 5px;
-    right: -60px;
+    top: 3px;
+    left: -60px;
 }
 
 .copy{

@@ -53,6 +53,9 @@
 }
 
 @media (max-width: 600px) {
+    .model{
+        padding: 10px;
+    }
     .model-img:hover{
         transform: scale(1.1);
     }
